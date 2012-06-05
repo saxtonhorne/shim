@@ -13,5 +13,9 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "shim"
   gem.require_paths = ["lib"]
+  gem.bindir        = 'bin'
+  gem.executables   = ['shim']
   gem.version       = Shim::VERSION
+  gem.add_dependency("tilt")
+  gem.add_dependency("thor")
 end
