@@ -2,8 +2,8 @@
 require File.expand_path('../lib/shim/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Mike Utley"]
-  gem.email         = ["mikey.utley@gmail.com"]
+  gem.authors       = ["Mike Utley", "Corey Woodcox"]
+  gem.email         = ["mikey.utley@gmail.com", "corey.woodcox@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""
