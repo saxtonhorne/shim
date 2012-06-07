@@ -16,6 +16,8 @@ Gem::Specification.new do |gem|
   gem.bindir        = 'bin'
   gem.executables   = ['shim']
   gem.version       = Shim::VERSION
+
   gem.add_dependency("tilt")
   gem.add_dependency("thor")
+  gem.add_dependency('guard')
 end
