@@ -2,8 +2,8 @@
 require File.expand_path('../lib/shim/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Mike Utley"]
-  gem.email         = ["mikey.utley@gmail.com"]
+  gem.authors       = ["Mike Utley", "Corey Woodcox"]
+  gem.email         = ["mikey.utley@gmail.com", "corey.woodcox@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""
@@ -17,7 +17,9 @@ Gem::Specification.new do |gem|
   gem.executables   = ['shim']
   gem.version       = Shim::VERSION
 
-  gem.add_dependency("tilt")
-  gem.add_dependency("thor")
-  gem.add_dependency('guard')
+  gem.add_dependency 'thor'
+  gem.add_dependency 'guard'
+
+  gem.add_dependency 'rails', '~> 3.2.2'
+  gem.add_dependency 'jquery-rails'
 end
