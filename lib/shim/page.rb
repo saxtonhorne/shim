@@ -1,5 +1,4 @@
 module Shim
-  class Page
-    
+  class Page < ActionView::Base
   end 
 end	
