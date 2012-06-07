@@ -17,7 +17,9 @@ Gem::Specification.new do |gem|
   gem.executables   = ['shim']
   gem.version       = Shim::VERSION
 
-  gem.add_dependency("tilt")
-  gem.add_dependency("thor")
-  gem.add_dependency('guard')
+  gem.add_dependency 'thor'
+  gem.add_dependency 'guard'
+
+  gem.add_dependency 'rails', '~> 3.2.2'
+  gem.add_dependency 'jquery-rails'
 end
