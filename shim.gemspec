@@ -4,8 +4,8 @@ require File.expand_path('../lib/shim/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Mike Utley", "Corey Woodcox"]
   gem.email         = ["mikey.utley@gmail.com", "corey.woodcox@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Shim is a small CMS built as a Rails engine.}
+  gem.summary       = %q{Shim follows Rails principles to create a CMS environment familiar to developers and easy for designers.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
