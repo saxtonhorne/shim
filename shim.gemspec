@@ -22,4 +22,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'rails', '~> 3.2.2'
   gem.add_dependency 'jquery-rails'
+
+  gem.add_development_dependency 'sqlite3'
+  gem.add_development_dependency 'pry'
 end
