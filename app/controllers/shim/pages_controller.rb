@@ -1,6 +1,6 @@
 class Shim::PagesController < ActionController::Base
   unloadable
-  layout Proc.new { |_| Shim.layout }
+  layout Proc.new { |_| ::Shim.layout }
 
   rescue_from ActionView::MissingTemplate do |exception|
     if exception.message =~ %r{Missing template #{content_path}}
@@ -26,6 +26,6 @@ class Shim::PagesController < ActionController::Base
   end
 
   def content_path
-    Shim.content_path
+    ::Shim.content_path
   end
 end
