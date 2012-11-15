@@ -4,7 +4,9 @@ class Shim::PagesController < ActionController::Base
 
   rescue_from ActionView::MissingTemplate do |exception|
     if exception.message =~ %r{Missing template #{content_path}}
-      raise ActionController::RoutingError, "No such page: #{params[:id]}"
+      # There's probably a better way to put both of these in the same handler,
+      # but unless is the best I can com up with for now.
+      raise ActionController::RoutingError, "No such page: #{params[:id]}" unless try_index
     else
       raise exception
     end
@@ -27,5 +29,11 @@ class Shim::PagesController < ActionController::Base
 
   def content_path
     ::Shim.content_path
+  end
+
+  def try_index
+    render :template => "#{current_page}/index"
+  rescue ActionView::MissingTemplate 
+    false
   end
 end
