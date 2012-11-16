@@ -6,7 +6,7 @@ module Shim
 
     def nav_class(section)
       if current_section == section
-        "current-page"
+        Shim.configuration.active_nav_class
       else
         ""
       end
