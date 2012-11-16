@@ -2,16 +2,12 @@ require "shim/version"
 require "shim/configuration"
 
 module Shim
-  mattr_accessor :layout, :content_path
+  mattr_accessor :layout, :content_path, :configuration
   @@content_path = "shim/"
   @@layout = "application"
-
-  def config(&block)
-    if block.arity == 1
-      self[&block]
-    else
-      instance_eval &block
-    end
+  @@configuration = Shim::Configuration.configure do |config|
+    config.active_nav_class = "current-page"
+    config
   end
 
   require 'shim/engine'
