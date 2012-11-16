@@ -1,4 +1,5 @@
 require "shim/version"
+require "shim/configuration"
 
 module Shim
   mattr_accessor :layout, :content_path
