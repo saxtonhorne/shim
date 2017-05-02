@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.executables   = ['shim']
   gem.version       = Shim::VERSION
 
-  gem.add_dependency 'rails', '~> 3.2.2'
+  gem.add_dependency 'rails', '~> 3.2.22'
   gem.add_dependency 'jquery-rails'
 
   gem.add_development_dependency 'sqlite3'
